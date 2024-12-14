@@ -48,11 +48,11 @@ function StudentManagement() {
   };
 
   return (
-    <div className="p-5">
+    <div className="p-2 md:p-5">
       <h1 className="text-2xl font-bold mb-5">Student Management System</h1>
 
       {/* Input Form */}
-      <div className="mb-5 flex gap-2">
+      <div className="mb-5 flex flex-col md:flex-row gap-2">
         <input
           type="text"
           name="name"
@@ -80,14 +80,14 @@ function StudentManagement() {
         {editIndex === -1 ? (
           <button
             onClick={addStudent}
-            className="btn btn-primary"
+            className="btn btn-primary btn-outline"
           >
             Add Student
           </button>
         ) : (
           <button
             onClick={updateStudent}
-            className="btn btn-success"
+            className="btn btn-success btn-outline"
           >
             Update Student
           </button>
@@ -114,13 +114,13 @@ function StudentManagement() {
                 <td className="flex gap-2">
                   <button
                     onClick={() => editStudent(index)}
-                    className="btn btn-warning btn-sm"
+                    className="btn btn-warning btn-sm btn-outline"
                   >
                     Edit
                   </button>
                   <button
                     onClick={() => deleteStudent(index)}
-                    className="btn btn-error btn-sm"
+                    className="btn btn-error btn-sm btn-outline"
                   >
                     Delete
                   </button>
@@ -131,7 +131,7 @@ function StudentManagement() {
         </table>
       </div>
 
-      {students.length === 0 && <p className="text-gray-500 mt-5">No students available. Add some!</p>}
+      {students.length === 0 && <p className="text-red-500 font-semibold mt-5">No students available. Add some!</p>}
     </div>
   );
 }

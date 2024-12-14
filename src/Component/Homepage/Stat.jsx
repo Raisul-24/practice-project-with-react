@@ -2,8 +2,8 @@ import React from 'react';
 
 const Stat = () => {
    return (
-      <div className='my-10'>
-      <div className="stats shadow w-full bg-lime-50">
+      <div className='my-10 px-2 lg:px-10'>
+      <div className="stats shadow w-full bg-lime-50 flex flex-col md:flex-row">
          <div className="stat">
             <div className="stat-figure text-primary">
                <svg
@@ -46,7 +46,7 @@ const Stat = () => {
             <div className="stat-figure text-secondary">
                <div className="avatar online">
                   <div className="w-16 rounded-full">
-                     <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                     <img src="/student-management-system2.png" />
                   </div>
                </div>
             </div>
